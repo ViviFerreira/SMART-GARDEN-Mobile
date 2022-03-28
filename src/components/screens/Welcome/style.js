@@ -23,7 +23,7 @@ export default StyleSheet.create({
         paddingTop: 20,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
-        backgroundColor: "#078007",
+        backgroundColor: "transparent",
     },
     formImage:{
         width: "40%",
@@ -44,17 +44,14 @@ export default StyleSheet.create({
     formButton:{
         width: 60,
         height: 60,
-        borderRadius: 10,
+        borderRadius: 20,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#fff",
-        borderStyle: "solid",
-        borderWidth: 2,
-        borderColor: "#078007",
+        backgroundColor: "#059c38",
     },
     formButtonText:{
         fontSize: 20,
         fontWeight: "bold",
-        color: "#078007",
+        color: "#fff",
     }
 });
