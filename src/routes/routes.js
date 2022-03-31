@@ -14,6 +14,8 @@ export default function Routes() {
       }}
     >
       <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="LogIn" component={LoginScreen} />
+      <Stack.Screen name="Signin" component={SigninScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
     </Stack.Navigator>
   );
