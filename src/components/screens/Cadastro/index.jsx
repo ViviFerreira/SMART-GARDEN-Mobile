@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { Text, StyleSheet } from 'react-native';
 import { colorPrimary, colorWhite } from '~/components/UI/variaveis';
 import Background from '~/components/Usuario/Background';
 import Content from '~/components/Usuario/Content';
@@ -10,7 +8,6 @@ import InputArea from '~/components/Usuario/InputArea';
 import Input from '~/components/Usuario/Input';
 import Button from '~/components/Usuario/Button';
 import Link from '~/components/Usuario/Link';
-
 import {
   AntDesign,
   MaterialCommunityIcons,
@@ -22,8 +19,6 @@ export default Cadastro = () => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
-
-  const navigation = useNavigation();
 
   const cadastrar = () => {
     console.log(nome, email, senha, confirmarSenha);
@@ -69,19 +64,8 @@ export default Cadastro = () => {
           </InputArea>
         </ContainerForm>
         <Button nome="Cadastar" acao={cadastrar} />
-        <Link>
-          <Text style={style.texto}>Já tenho uma conta</Text>
-        </Link>
+        <Link to="Login">Já tenho uma conta</Link>
       </Content>
     </Background>
   );
 };
-
-export const style = StyleSheet.create({
-  texto: {
-    color: colorWhite,
-    textAlign: 'left',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-});

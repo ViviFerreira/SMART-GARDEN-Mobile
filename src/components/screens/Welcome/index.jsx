@@ -50,7 +50,7 @@ export default function Welcome() {
                 iterationCount="infinite"
               >
                 <TouchableOpacity
-                  onPress={() => navigation.navigate('Cadastro')}
+                  onPress={() => navigation.navigate('Login')}
                   style={styles.formButton}
                 >
                   <Icon
