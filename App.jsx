@@ -1,13 +1,15 @@
-import React from 'react'
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import Routes from "~/routes/routes";
+import React from 'react';
+import { SafeAreaView, StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import Routes from '~/routes/routes';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Routes />
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar />
+        <Routes />
+      </SafeAreaView>
     </NavigationContainer>
   );
 }

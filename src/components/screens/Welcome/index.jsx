@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   View,
@@ -6,17 +6,17 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-} from "react-native";
-import { StatusBar } from "expo-status-bar";
-import { useNavigation } from "@react-navigation/native";
-import { LinearGradient } from "expo-linear-gradient";
-import Icon from "@expo/vector-icons/MaterialIcons";
-import * as Animatable from "react-native-animatable";
-import Lottie from "lottie-react-native";
-import Plantas from "../../../../assets/Plantas.jpg";
-import styles from "./style";
-import GifGarden from "../../../../assets/GifGarden.json";
-import Logo from "../../../../assets/LogoSG.png";
+} from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from '@react-navigation/native';
+import { LinearGradient } from 'expo-linear-gradient';
+import Icon from '@expo/vector-icons/MaterialIcons';
+import * as Animatable from 'react-native-animatable';
+import Lottie from 'lottie-react-native';
+import Plantas from '../../../../assets/Plantas.jpg';
+import styles from './style';
+import GifGarden from '../../../../assets/GifGarden.json';
+import Logo from '../../../../assets/LogoSG.png';
 
 export default function Welcome() {
   const navigation = useNavigation();
@@ -26,41 +26,41 @@ export default function Welcome() {
       <ImageBackground
         resizeMode="cover"
         source={Plantas}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: '100%', height: '100%' }}
       >
-        <LinearGradient
-          colors={["#0000", "#000000"]}
-          style={{ flex: 1 }}
-        >
-        <Lottie style={styles.gif} source={GifGarden} autoPlay loop />
+        <LinearGradient colors={['#0000', '#000000']} style={{ flex: 1 }}>
+          <Lottie style={styles.gif} source={GifGarden} autoPlay loop />
 
-        <View style={styles.header}></View>
+          <View style={styles.header}></View>
 
-        <View style={{ flex: 1.2 }}>
-          <Animatable.View
-            animation="fadeInUpBig"
-            delay={1000}
-            style={styles.form}
-          >
-            <Image source={Logo} style={styles.formImage} />
-            <Text style={styles.formText}>Smart Garden</Text>
-            <Text style={styles.formSubText}>
-              A melhor opção em cuidado com o seu jardim
-            </Text>
+          <View style={{ flex: 1.2 }}>
             <Animatable.View
-              animation="pulse"
-              easing="ease-out"
-              iterationCount="infinite"
+              animation="fadeInUpBig"
+              delay={1000}
+              style={styles.form}
             >
-              <TouchableOpacity
-                onPress={() => navigation.navigate("Login")}
-                style={styles.formButton}
+              <Image source={Logo} style={styles.formImage} />
+              <Text style={styles.formText}>Smart Garden</Text>
+              <Text style={styles.formSubText}>
+                A melhor opção em cuidado com o seu jardim
+              </Text>
+              <Animatable.View
+                animation="pulse"
+                easing="ease-out"
+                iterationCount="infinite"
               >
-                <Icon name="arrow-forward-ios" style={styles.formButtonText} />
-              </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('Cadastro')}
+                  style={styles.formButton}
+                >
+                  <Icon
+                    name="arrow-forward-ios"
+                    style={styles.formButtonText}
+                  />
+                </TouchableOpacity>
+              </Animatable.View>
             </Animatable.View>
-          </Animatable.View>
-        </View>
+          </View>
         </LinearGradient>
       </ImageBackground>
     </View>
