@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { colorPrimary, colorWhite } from '../UI/variaveis';
 
-export default Button = ({ nome, acao }) => {
+export default Button = ({ name, handle }) => {
   return (
-    <TouchableOpacity style={style.botao} onPress={() => acao()}>
-      <Text style={style.botaoText}>{nome}</Text>
+    <TouchableOpacity style={style.botao} onPress={() => handle()}>
+      <Text style={style.botaoText}>{name}</Text>
     </TouchableOpacity>
   );
 };

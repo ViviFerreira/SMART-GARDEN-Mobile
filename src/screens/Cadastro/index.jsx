@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import { colorPrimary, colorWhite } from '~/components/UI/variaveis';
-import Background from '~/components/Usuario/Background';
-import Content from '~/components/Usuario/Content';
-import Logo from '~/components/Usuario/Logo';
-import ContainerForm from '~/components/Usuario/ContainerForm';
-import InputArea from '~/components/Usuario/InputArea';
-import Input from '~/components/Usuario/Input';
-import Button from '~/components/Usuario/Button';
-import Link from '~/components/Usuario/Link';
+import { colorPrimary } from '~/components/UI/variaveis';
+import Background from '~/components/auth/Background';
+import Content from '~/components/auth/Content';
+import Logo from '~/components/auth/Logo';
+import ContainerForm from '~/components/auth/ContainerForm';
+import InputArea from '~/components/auth/InputArea';
+import Input from '~/components/auth/Input';
+import Button from '~/components/auth/Button';
+import Link from '~/components/auth/Link';
 import {
   AntDesign,
   MaterialCommunityIcons,
   Ionicons,
 } from '@expo/vector-icons';
 
-export default Cadastro = () => {
+export default function Cadastro() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
 
-  const cadastrar = () => {
+  const handleCadastro = () => {
     console.log(nome, email, senha, confirmarSenha);
     alert('Perfil cadastrado');
   };
@@ -63,9 +63,9 @@ export default Cadastro = () => {
             />
           </InputArea>
         </ContainerForm>
-        <Button nome="Cadastar" acao={cadastrar} />
+        <Button name="Cadastar" handle={handleCadastro} />
         <Link to="Login">Já tenho uma conta</Link>
       </Content>
     </Background>
   );
-};
+}

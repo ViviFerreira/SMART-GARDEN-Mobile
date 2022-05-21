@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
-import fundo from '../../../assets/fundo.png';
+import fundo from '../../../assets/background01.jpg';
 
 export default Background = ({ children }) => {
   return (

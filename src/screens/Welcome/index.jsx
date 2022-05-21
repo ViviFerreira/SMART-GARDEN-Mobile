@@ -13,10 +13,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Icon from '@expo/vector-icons/MaterialIcons';
 import * as Animatable from 'react-native-animatable';
 import Lottie from 'lottie-react-native';
-import Plantas from '../../../../assets/Plantas.jpg';
+import Plantas from '../../../assets/background01.jpg';
 import styles from './style';
-import GifGarden from '../../../../assets/GifGarden.json';
-import Logo from '../../../../assets/LogoSG.png';
+import GifGarden from '../../../assets/GifGarden.json';
+import Logo from '../../../assets/LogoSG.png';
 
 export default function Welcome() {
   const navigation = useNavigation();

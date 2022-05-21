@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
-import { colorPrimary, colorWhite } from '~/components/UI/variaveis';
-import Background from '~/components/Usuario/Background';
-import Content from '~/components/Usuario/Content';
-import Logo from '~/components/Usuario/Logo';
-import ContainerForm from '~/components/Usuario/ContainerForm';
-import InputArea from '~/components/Usuario/InputArea';
-import Input from '~/components/Usuario/Input';
-import Button from '~/components/Usuario/Button';
-import Link from '~/components/Usuario/Link';
+import { colorPrimary } from '~/components/UI/variaveis';
+import Background from '~/components/auth/Background';
+import Content from '~/components/auth/Content';
+import Logo from '~/components/auth/Logo';
+import ContainerForm from '~/components/auth/ContainerForm';
+import InputArea from '~/components/auth/InputArea';
+import Input from '~/components/auth/Input';
+import Button from '~/components/auth/Button';
+import Link from '~/components/auth/Link';
 
-export default Login = () => {
+export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const navigation = useNavigation();
 
-  const logar = () => {
+  const handleLogin = () => {
     console.log(email, senha);
+    navigation.navigate('Home');
   };
 
   return (
@@ -40,7 +43,7 @@ export default Login = () => {
             <Input ocultarCampo={true} campo="Senha" setValue={setSenha} />
           </InputArea>
         </ContainerForm>
-        <Button nome="Logar" acao={logar} />
+        <Button name="Logar" handle={handleLogin} />
         <Link to="Cadastro">Ainda não tenho uma conta</Link>
         <Link to="Login" style={{ marginTop: 5 }}>
           Esqueci minha senha
@@ -48,4 +51,4 @@ export default Login = () => {
       </Content>
     </Background>
   );
-};
+}
