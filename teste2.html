@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div   id="json"></div>
+    <div  style="background-color: black;" id="xx"></div>
+    <!--  <div style="display:none" id="json"></div>-->
+</head>
+<body>
+    <script>
+        async function fetchIpApi(){
+    try{
+        let response = await fetch('http://ip-api.com/json/');
+        let usuario = await response.json();
+        return usuario;
+    } catch (err){
+        console.log(err);
+    }
+}
+fetchIpApi().then(
+    dado =>document.getElementById("json").innerText = JSON.stringify(dado, undefined, 2)
+    
+    
+);
+    if(response.region == 'RN'){
+        document.getElementById("xx").innerHTML= "AA";
+}
+else{
+    document.getElementById("xx").innerHTML= "nn";
+}
+
+
+    </script>
+</body>
+</html>

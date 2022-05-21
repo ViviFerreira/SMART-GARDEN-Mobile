@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <CENTER><div   id="json"></div>
+    <H3><div style="background-color: aqua;" id="xx"></div></H3>
+</head>
+<body>
+    <script>
+        async function fetchIpApi(){
+    try{
+        let response = await fetch('http://ip-api.com/json/');
+        let usuario = await response.json();
+        return usuario;
+    } catch (err){
+        console.log(err);
+    }
+}
+fetchIpApi().then(
+    dado =>document.getElementById("json").innerText = JSON.stringify(dado, undefined, 2)
+        
+);
+
+
+
+
+
+
+var endpoint = 'http://ip-api.com/json/';
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var response = JSON.parse(this.responseText);
+		if(response.status !== 'success') {
+			console.log('query failed: ' + response.message);
+			return
+		}
+		//fazendo os if's
+		}
+        if(response.timezone == "America/Fortaleza"){
+            document.getElementById("xx").innerHTML = 'FDBF';
+        }
+	/* 	if(response.region == "RN") {
+			document.getElementById("xx").innerHTML= "VOCÊ ESTÁ NO NORDESTE OU EM ALGUMA REGIÃO PROXIMA";
+		}  */
+	} 
+
+xhr.open('GET', endpoint, true);
+xhr.send();
+    </script>
+</body>
+</html>
