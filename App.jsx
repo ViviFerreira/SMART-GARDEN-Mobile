@@ -7,7 +7,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar />
         <Routes />
       </SafeAreaView>
     </NavigationContainer>

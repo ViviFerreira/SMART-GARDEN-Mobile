@@ -18,6 +18,7 @@ export default function TabNavigation() {
 
   return (
     <Tab.Navigator
+      initialRouteName="Home"
       screenOptions={({ route }) => ({
         tabBarIcon: () => {
           let iconName;
@@ -39,11 +40,13 @@ export default function TabNavigation() {
 
           return <Image source={iconName} style={styles.icon} />;
         },
+        headerShown: false,
       })}
       tabBarOptions={{
         activeBackgroundColor: colorPrimary,
         inactiveBackgroundColor: colorPrimary,
         showLabel: false,
+        keyboardHidesTabBar: true,
       }}
     >
       <Tab.Screen name="Home" component={Home} />
