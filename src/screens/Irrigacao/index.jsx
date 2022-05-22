@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import Layout from '~/components/Layout/index';
 
 export default function Irrigacao() {
   return (
-    <View>
+    <Layout>
       <Text>Irrigacao!</Text>
-    </View>
+    </Layout>
   );
 }
