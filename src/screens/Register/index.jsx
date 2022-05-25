@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { colorPrimary } from '~/components/UI/variaveis';
-import Background from '~/components/auth/Background';
-import Content from '~/components/auth/Content';
-import Logo from '~/components/auth/Logo';
-import ContainerForm from '~/components/auth/ContainerForm';
-import InputArea from '~/components/auth/InputArea';
-import Input from '~/components/auth/Input';
-import Button from '~/components/auth/Button';
-import Link from '~/components/auth/Link';
+import Background from '~/components/global/Background';
+import Content from '~/components/global/Content';
+import Logo from '~/components/global/Logo';
+import ContainerForm from '~/components/global/ContainerForm';
+import InputArea from '~/components/global/InputArea';
+import Input from '~/components/global/Input';
+import Button from '~/components/global/Button/index';
+import Link from '~/components/global/Link';
 import {
   AntDesign,
   MaterialCommunityIcons,

@@ -4,7 +4,7 @@ import Welcome from '~screens/Welcome/';
 import Cadastro from '~screens/Cadastro';
 import Login from '~screens/Login';
 import TabNavigation from '~/components/TabNavigation/';
-import { RecoverPassword } from '~/screens/RecoverPassword/index';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +20,6 @@ export default function Routes() {
       <Stack.Screen name="Cadastro" component={Cadastro} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={TabNavigation} />
-      <Stack.Screen name="Recover" component={RecoverPassword} />
     </Stack.Navigator>
   );
 }
