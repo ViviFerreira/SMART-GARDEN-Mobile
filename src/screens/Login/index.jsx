@@ -45,7 +45,7 @@ export default function Login() {
         </ContainerForm>
         <Button name="Logar" handle={handleLogin} />
         <Link to="Cadastro">Ainda não tenho uma conta</Link>
-        <Link to="Login" style={{ marginTop: 5 }}>
+        <Link to="Recover" style={{ marginTop: 5 }}>
           Esqueci minha senha
         </Link>
       </Content>
