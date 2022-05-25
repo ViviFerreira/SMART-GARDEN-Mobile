@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import Layout from '~/components/Layout/index';
 
-export default function Home() {
+export default function Irrigation() {
   return (
     <Layout>
-      <Text>Plantar!</Text>
+      <Text>Irrigacao!</Text>
     </Layout>
   );
 }

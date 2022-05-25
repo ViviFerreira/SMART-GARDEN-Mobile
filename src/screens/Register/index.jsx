@@ -14,7 +14,7 @@ import {
   Ionicons,
 } from '@expo/vector-icons';
 
-export default function Cadastro() {
+export default function Register() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');

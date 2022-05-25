@@ -4,14 +4,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colorPrimary } from '~/components/UI/variaveis';
 
 import home from '../../../assets/navigation/home.png';
-import plantar from '../../../assets/navigation/plantar.png';
-import plantacao from '../../../assets/navigation/plantacao.png';
-import irrigacao from '../../../assets/navigation/irrigacao.png';
+import plant from '../../../assets/navigation/plant.png';
+import plantation from '../../../assets/navigation/plantation.png';
+import irrigation from '../../../assets/navigation/irrigation.png';
 
 import Home from '~screens/Home';
-import Plantar from '~screens/Plantar';
-import Plantacao from '~screens/Plantacao';
-import Irrigacao from '~screens/Irrigacao';
+import Plant from '~screens/Plant';
+import Plantation from '~screens/Plantation';
+import Irrigation from '~screens/Irrigation';
 
 export default function TabNavigation() {
   const Tab = createBottomTabNavigator();
@@ -27,18 +27,18 @@ export default function TabNavigation() {
             case 'Home':
               iconName = home;
               break;
-            case 'Plantar':
-              iconName = plantar;
+            case 'Plant':
+              iconName = plant;
               break;
-            case 'Plantacao':
-              iconName = plantacao;
+            case 'Plantation':
+              iconName = plantation;
               break;
-            case 'Irrigacao':
-              iconName = irrigacao;
+            case 'Irrigation':
+              iconName = irrigation;
               break;
           }
 
-          return <Image source={iconName} style={styles.icon} />;
+          return <Image source={iconName} style={{ width: 32, height: 32 }} />;
         },
         headerShown: false,
       })}
@@ -50,16 +50,9 @@ export default function TabNavigation() {
       }}
     >
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Plantar" component={Plantar} />
-      <Tab.Screen name="Plantacao" component={Plantacao} />
-      <Tab.Screen name="Irrigacao" component={Irrigacao} />
+      <Tab.Screen name="Plant" component={Plant} />
+      <Tab.Screen name="Plantation" component={Plantation} />
+      <Tab.Screen name="Irrigation" component={Irrigation} />
     </Tab.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  icon: {
-    width: 32,
-    height: 32,
-  },
-});

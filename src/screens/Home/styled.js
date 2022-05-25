@@ -1,6 +1,9 @@
 import styled from 'styled-components/native';
-import { colorPrimary } from '~/components/UI/variaveis';
-import { colorWhite, colorBgPrimary } from '~components/UI/variaveis';
+import {
+  colorWhite,
+  colorPrimary,
+  colorBgPrimary,
+} from '~components/UI/variaveis';
 
 export const CardWelcome = styled.View`
   width: 95%;
