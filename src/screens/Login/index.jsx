@@ -8,7 +8,7 @@ import Logo from '~/components/global/Logo';
 import ContainerForm from '~/components/global/ContainerForm';
 import InputArea from '~/components/global/InputArea';
 import Input from '~/components/global/Input';
-import Button from '~/components/global/Button/index';
+import Button from '~/components/global/Button';
 import Link from '~/components/global/Link';
 
 export default function Login() {
@@ -43,8 +43,10 @@ export default function Login() {
             <Input ocultarCampo={true} campo="Senha" setValue={setSenha} />
           </InputArea>
         </ContainerForm>
-        <Button name="Logar" handle={handleLogin} />
-        <Link to="Cadastro">Ainda não tenho uma conta</Link>
+        <Button onPress={handleLogin} style={{ marginTop: 25 }}>
+          Logar
+        </Button>
+        <Link to="Register">Ainda não tenho uma conta</Link>
         <Link to="Recover" style={{ marginTop: 5 }}>
           Esqueci minha senha
         </Link>

@@ -1,19 +1,8 @@
-import React from "react";
-import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import React from 'react';
+import { Container, ContentButton, IconButton, Label, Loading } from './styles';
+import { colorPrimary, colorWhite } from '../../UI/variaveis';
 
-import { Container, ContentButton, IconButton, Label, Loading } from "./styles";
-
-import {
-  colorBgPrimary,
-  colorBgSecondary,
-  colorBlack,
-  colorPrimary,
-  colorRed,
-  colorStatusBar,
-  colorWhite,
-} from "../../UI/variaveis";
-
-export function Button({
+export default function Button({
   children,
   iconName,
   color,

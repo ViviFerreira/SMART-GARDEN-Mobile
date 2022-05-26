@@ -1,12 +1,17 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import Layout from '~/components/Layout';
+import { Feather } from '@expo/vector-icons';
+import { SearchBar, SearchInput } from './styles';
 import { TitleScreens } from '~/components/TitleScreens';
 
 export default function Plantation() {
   return (
     <Layout>
-      <TitleScreens style={{ padding: 20 }}>Progressao dos itens</TitleScreens>
+      <SearchBar>
+        <Feather name="search" size={24} color="black" />
+        <SearchInput placeholder="Buscar" placeholderTextColor="black" />
+      </SearchBar>
+      <TitleScreens style={{ padding: 10 }}>Progressao dos itens</TitleScreens>
     </Layout>
   );
 }

@@ -12,7 +12,7 @@ import {
   Link,
   BtnPlantar,
   TextBtn,
-} from './styled';
+} from './styles';
 import icon from '../../../assets/IconWelcomeHome.png';
 
 export default function Home() {

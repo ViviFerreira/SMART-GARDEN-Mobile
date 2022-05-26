@@ -1,6 +1,6 @@
 import React from 'react';
 import { Feather, Octicons } from '@expo/vector-icons';
-import { StyledHeader, Title, ContainerTitle, Logo } from './styled';
+import { StyledHeader, Title, ContainerTitle, Logo } from './styles';
 import logo from '../../../../assets/LogoBranca.png';
 
 export default function Header() {
