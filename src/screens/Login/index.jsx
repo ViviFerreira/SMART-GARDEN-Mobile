@@ -43,7 +43,10 @@ export default function Login() {
             <Input ocultarCampo={true} campo="Senha" setValue={setSenha} />
           </InputArea>
         </ContainerForm>
-        <Button onPress={handleLogin} style={{ marginTop: 25 }}>
+        <Button
+          onPress={handleLogin}
+          style={{ marginTop: 25, borderRadius: 25 }}
+        >
           Logar
         </Button>
         <Link to="Register">Ainda não tenho uma conta</Link>

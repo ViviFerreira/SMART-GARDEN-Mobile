@@ -63,7 +63,10 @@ export default function Register() {
             />
           </InputArea>
         </ContainerForm>
-        <Button onPress={handleCadastro} style={{ marginTop: 25 }}>
+        <Button
+          onPress={handleCadastro}
+          style={{ marginTop: 25, borderRadius: 25 }}
+        >
           Cadastro
         </Button>
         <Link to="Login">Já tenho uma conta</Link>
