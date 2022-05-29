@@ -4,6 +4,7 @@ import {
   colorPrimary,
   colorBgPrimary,
 } from '~components/UI/variaveis';
+import { Feather } from '@expo/vector-icons';
 
 export const SearchBar = styled.View`
   flex-direction: row;
@@ -24,22 +25,21 @@ export const SearchInput = styled.TextInput`
 
 export const CardProduct = styled.View`
   width: 95%;
-  min-height: 30%;
+  height: 300px;
   margin: 2px auto;
   background-color: ${colorBgPrimary};
   border-radius: 20px;
-  padding-left: 15px;
-  padding-right: 10px;
-  padding-top: 15px;
+  padding: 10px;
   margin-bottom: 10px;
 `;
+
 export const FlexContent = styled.View`
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 `;
 export const CircleImgProduct = styled.View`
   width: 80px;
-  min-height: 80px;
+  height: 80px;
   margin: 10px auto;
   background-color: ${colorWhite};
   border-radius: 50px;
@@ -67,7 +67,7 @@ export const ProgressBar = styled.View`
   border-radius: 10px;
 `;
 export const BarPercentage = styled.View`
-  width: 27%;
+  width: ${(props) => props.percentage}%;
   height: 100%;
   background-color: ${colorPrimary};
   border-radius: 10px;
