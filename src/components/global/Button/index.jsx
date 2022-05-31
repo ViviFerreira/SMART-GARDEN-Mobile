@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Container, ContentButton, IconButton, Label, Loading } from './styles';
 import { colorPrimary, colorWhite } from '../../UI/variaveis';
 

@@ -4,8 +4,8 @@ import Background from '~/components/global/Background';
 import Content from '~/components/global/Content';
 import Logo from '~/components/global/Logo';
 import ContainerForm from '~/components/global/ContainerForm';
-import InputArea from '~/components/global/InputArea';
-import Input from '~/components/global/Input';
+import InputArea from '~/components/global/InputForm/index';
+import Input from '~/components/global/Input/index';
 import Button from '~/components/global/Button/index';
 import Link from '~/components/global/Link';
 import {

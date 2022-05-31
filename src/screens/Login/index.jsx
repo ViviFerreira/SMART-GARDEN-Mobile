@@ -6,15 +6,17 @@ import Background from '~/components/global/Background';
 import Content from '~/components/global/Content';
 import Logo from '~/components/global/Logo';
 import ContainerForm from '~/components/global/ContainerForm';
-import InputArea from '~/components/global/InputArea';
-import Input from '~/components/global/Input';
+import InputArea from '~/components/global/InputForm/index';
+import Input from '~/components/global/Input/index';
 import Button from '~/components/global/Button';
 import Link from '~/components/global/Link';
 
 export default function Login() {
+  const navigation = useNavigation();
+
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const navigation = useNavigation();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = () => {
     console.log(email, senha);
@@ -40,7 +42,7 @@ export default function Login() {
               size={20}
               color={colorPrimary}
             />
-            <Input ocultarCampo={true} campo="Senha" setValue={setSenha} />
+            <Input ocultarCampo campo="Senha" setValue={setSenha}  />
           </InputArea>
         </ContainerForm>
         <Button
