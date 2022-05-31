@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   View,
@@ -6,18 +6,17 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-} from "react-native";
-import { StatusBar } from "expo-status-bar";
-import { useNavigation } from "@react-navigation/native";
-import { LinearGradient } from "expo-linear-gradient";
-import Icon from "@expo/vector-icons/MaterialIcons";
-import * as Animatable from "react-native-animatable";
-import Lottie from "lottie-react-native";
-import Plantas from "../../../assets/background01.jpg";
-import styles from "./style";
-import GifGarden from "../../../assets/GifGarden.json";
-import Logo from "../../../assets/LogoSG.png";
-import { Button } from "~/components/global/Button/index";
+} from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from '@react-navigation/native';
+import { LinearGradient } from 'expo-linear-gradient';
+import Icon from '@expo/vector-icons/MaterialIcons';
+import * as Animatable from 'react-native-animatable';
+import Lottie from 'lottie-react-native';
+import Plantas from '../../../assets/background01.jpg';
+import styles from './style';
+import GifGarden from '../../../assets/GifGarden.json';
+import Logo from '../../../assets/LogoSG.png';
 
 export default function Welcome() {
   const navigation = useNavigation();
@@ -27,9 +26,9 @@ export default function Welcome() {
       <ImageBackground
         resizeMode="cover"
         source={Plantas}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: '100%', height: '100%' }}
       >
-        <LinearGradient colors={["#0000", "#000000"]} style={{ flex: 1 }}>
+        <LinearGradient colors={['#0000', '#000000']} style={{ flex: 1 }}>
           <Lottie style={styles.gif} source={GifGarden} autoPlay loop />
 
           <View style={styles.header}></View>
@@ -51,7 +50,7 @@ export default function Welcome() {
                 iterationCount="infinite"
               >
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Login")}
+                  onPress={() => navigation.navigate('Login')}
                   style={styles.formButton}
                 >
                   <Icon
