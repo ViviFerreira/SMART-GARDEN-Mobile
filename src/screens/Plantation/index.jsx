@@ -24,6 +24,8 @@ import {
 import banana from "../../../assets/plantation/banana.png";
 import lettuce from "../../../assets/plantation/lettuce.png";
 
+import { Platform } from "react-native";
+
 export default function Plantation() {
   const products = [
     {
@@ -70,7 +72,7 @@ export default function Plantation() {
         Progressão dos itens
       </TitleScreens>
       <FlatList
-        style={{ marginTop: 4, marginBottom: 85 }}
+        style={{ marginTop: 4, marginBottom: Platform.OS === "ios" ? "23%" : "30%" }}
         data={products}
         renderItem={({ item, index }) => (
           <CardProduct key={index}>
