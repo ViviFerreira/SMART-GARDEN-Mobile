@@ -77,7 +77,7 @@ export default function Plantation() {
       <FlatList
         style={{
           marginTop: 4,
-          marginBottom: Platform.OS === "ios" ? `${RFPercentage(3)}%` : `${RFPercentage(5)}%`,
+          marginBottom: Platform.OS === "ios" ? `${RFPercentage(3)}%` : `${RFPercentage(4.5)}%`,
         }}
         data={products}
         renderItem={({ item, index }) => (

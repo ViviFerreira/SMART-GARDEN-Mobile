@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { colorPrimary } from '~/components/UI/variaveis';
+import { colorPrimary, colorRed, colorStatusBar } from '~/components/UI/variaveis';
 
 import home from '../../../assets/navigation/home.png';
 import plant from '../../../assets/navigation/plant.png';
@@ -43,10 +43,11 @@ export default function TabNavigation() {
         headerShown: false,
       })}
       tabBarOptions={{
-        activeBackgroundColor: colorPrimary,
+        activeBackgroundColor: colorStatusBar,
         inactiveBackgroundColor: colorPrimary,
         showLabel: false,
         keyboardHidesTabBar: true,
+        tabBarStyle: { },
       }}
     >
       <Tab.Screen name="Home" component={Home} />
