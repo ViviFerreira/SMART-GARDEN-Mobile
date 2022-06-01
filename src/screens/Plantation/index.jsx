@@ -1,4 +1,5 @@
 import React from "react";
+
 import Layout from "~/components/Layout";
 
 import { FlatList } from "react-native";
@@ -7,6 +8,12 @@ import { Feather } from "@expo/vector-icons";
 
 import { TitleScreens } from "~/components/TitleScreens";
 
+import { Platform } from "react-native";
+
+import { ProgressBar } from "react-native-paper";
+
+import { RFPercentage } from "react-native-responsive-fontsize";
+
 import {
   SearchBar,
   SearchInput,
@@ -14,22 +21,19 @@ import {
   CircleImgProduct,
   ImgProduct,
   TextCard,
-  ProgressBar,
+  ViewProgressBar,
   BarPercentage,
   FlexContent,
   MoreOptions,
   Icons,
 } from "./styles";
 
+import * as Colors from "../../components/UI/variaveis";
+
 import banana from "../../../assets/plantation/banana.png";
 import lettuce from "../../../assets/plantation/lettuce.png";
 
-import { Platform, Dimensions } from "react-native";
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-
 export default function Plantation() {
-  const { width } = Dimensions.get("window");
-
   const products = [
     {
       id: 1,
@@ -77,7 +81,10 @@ export default function Plantation() {
       <FlatList
         style={{
           marginTop: 4,
-          marginBottom: Platform.OS === "ios" ? `${RFPercentage(3)}%` : `${RFPercentage(4.5)}%`,
+          marginBottom:
+            Platform.OS === "ios"
+              ? `${RFPercentage(3)}%`
+              : `${RFPercentage(4.5)}%`,
         }}
         data={products}
         renderItem={({ item, index }) => (
@@ -92,9 +99,9 @@ export default function Plantation() {
             <TextCard>Categoria: {item.categoria} </TextCard>
             <TextCard>Colheita: {item.colheita}</TextCard>
             <TextCard>Progresso: {item.progresso}%</TextCard>
-            <ProgressBar>
-              <BarPercentage percentage={item.progresso} />
-            </ProgressBar>
+            <ViewProgressBar>
+              <ProgressBar progress={item.progresso / 100} color={Colors.colorPrimary}  />
+            </ViewProgressBar>
           </CardProduct>
         )}
         keyExtractor={(item) => String(item.id)}

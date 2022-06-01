@@ -1,10 +1,10 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
-import * as Colors from '~components/UI/variaveis';
+import * as Colors from "~components/UI/variaveis";
 
-import { RFValue } from 'react-native-responsive-fontsize';
+import { RFValue } from "react-native-responsive-fontsize";
 
-import { Feather } from '@expo/vector-icons';
+import { Feather } from "@expo/vector-icons";
 
 export const SearchBar = styled.View`
   flex-direction: row;
@@ -19,9 +19,9 @@ export const SearchBar = styled.View`
 `;
 
 export const Icons = styled(Feather)`
-color: ${Colors.colorWhite};
-font-size: ${RFValue(24)}px;
-`
+  color: ${Colors.colorWhite};
+  font-size: ${RFValue(24)}px;
+`;
 
 export const SearchInput = styled.TextInput`
   font-size: 15px;
@@ -30,7 +30,7 @@ export const SearchInput = styled.TextInput`
 
 export const CardProduct = styled.View`
   width: 90%;
-  height: 300px;
+  height: ${Platform.OS === "ios" ? 275 : 285}px;
   margin: 2px auto;
   background-color: ${Colors.colorBgPrimary};
   border-radius: 20px;
@@ -64,16 +64,12 @@ export const TextCard = styled.Text`
   font-weight: 900;
   font-weight: bold;
 `;
-export const ProgressBar = styled.View`
-  width: 100%;
-  height: 5%;
-  margin: 15px auto;
-  background-color: ${Colors.colorWhite};
-  border-radius: 10px;
+export const ViewProgressBar = styled.View`
+  padding: 15px 5px;
 `;
 export const BarPercentage = styled.View`
-  width: ${(props) => props.percentage}%;
-  height: 100%;
   background-color: ${Colors.colorPrimary};
+  width: ${(props) => props.percentage}%;
   border-radius: 10px;
+  height: 100%;
 `;
