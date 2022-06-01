@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text } from 'react-native';
 import { colorWhite } from '../UI/variaveis';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export default Link = ({ children, style, to }) => {
   const navigation = useNavigation();
@@ -18,12 +19,10 @@ export default Link = ({ children, style, to }) => {
 
 export const styles = StyleSheet.create({
   textoContent: {
-    width: '100%',
-    alignItems: 'flex-start',
-    marginTop: 50,
-    fontSize: 18,
+    marginTop: 20,
+    fontSize: RFValue(14),
     color: colorWhite,
-    textDecorationLine: 'underline',
+    textDecorationLine: 'none',
     fontWeight: 'bold',
   },
 });

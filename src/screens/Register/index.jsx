@@ -65,7 +65,7 @@ export default function Register() {
         </ContainerForm>
         <Button
           onPress={handleCadastro}
-          style={{ marginTop: 25, borderRadius: 25 }}
+          style={{ marginTop: 25, borderRadius: 8 }}
         >
           Cadastro
         </Button>

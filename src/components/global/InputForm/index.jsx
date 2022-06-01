@@ -11,10 +11,10 @@ export const style = StyleSheet.create({
   inputArea: {
     flexDirection: "row",
     alignItems: "center",
-    padding: 10,
+    padding: 13,
     paddingLeft: 20,
     backgroundColor: colorWhite,
-    borderRadius: 30,
+    borderRadius: 8,
     marginTop: 15,
   },
 });
