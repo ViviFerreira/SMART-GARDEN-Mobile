@@ -25,6 +25,7 @@ import banana from "../../../assets/plantation/banana.png";
 import lettuce from "../../../assets/plantation/lettuce.png";
 
 import { Platform, Dimensions } from "react-native";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export default function Plantation() {
   const { width } = Dimensions.get("window");
@@ -76,7 +77,7 @@ export default function Plantation() {
       <FlatList
         style={{
           marginTop: 4,
-          marginBottom: Platform.OS === "ios" ? "23%" : width / 3.5,
+          marginBottom: Platform.OS === "ios" ? `${RFPercentage(3)}%` : `${RFPercentage(5)}%`,
         }}
         data={products}
         renderItem={({ item, index }) => (
