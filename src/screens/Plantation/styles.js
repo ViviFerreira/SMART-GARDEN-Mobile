@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
-import {
-  colorWhite,
-  colorPrimary,
-  colorBgPrimary,
-} from '~components/UI/variaveis';
+
+import * as Colors from '~components/UI/variaveis';
+
+import { RFValue } from 'react-native-responsive-fontsize';
+
 import { Feather } from '@expo/vector-icons';
 
 export const SearchBar = styled.View`
@@ -12,11 +12,16 @@ export const SearchBar = styled.View`
   width: 90%;
   height: 35px;
   margin: 5px auto;
-  background-color: ${colorWhite};
+  background-color: ${Colors.colorWhite};
   padding: 5px;
   border-radius: 5px;
   margin-top: 20px;
 `;
+
+export const Icons = styled(Feather)`
+color: ${Colors.colorWhite};
+font-size: ${RFValue(24)}px;
+`
 
 export const SearchInput = styled.TextInput`
   font-size: 15px;
@@ -24,10 +29,10 @@ export const SearchInput = styled.TextInput`
 `;
 
 export const CardProduct = styled.View`
-  width: 95%;
+  width: 90%;
   height: 300px;
   margin: 2px auto;
-  background-color: ${colorBgPrimary};
+  background-color: ${Colors.colorBgPrimary};
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 10px;
@@ -41,7 +46,7 @@ export const CircleImgProduct = styled.View`
   width: 80px;
   height: 80px;
   margin: 10px auto;
-  background-color: ${colorWhite};
+  background-color: ${Colors.colorWhite};
   border-radius: 50px;
   justify-content: center;
   align-items: center;
@@ -53,7 +58,7 @@ export const ImgProduct = styled.Image`
 `;
 
 export const TextCard = styled.Text`
-  color: ${colorWhite};
+  color: ${Colors.colorWhite};
   font-size: 18px;
   padding: 5px;
   font-weight: 900;
@@ -63,12 +68,12 @@ export const ProgressBar = styled.View`
   width: 100%;
   height: 5%;
   margin: 15px auto;
-  background-color: ${colorWhite};
+  background-color: ${Colors.colorWhite};
   border-radius: 10px;
 `;
 export const BarPercentage = styled.View`
   width: ${(props) => props.percentage}%;
   height: 100%;
-  background-color: ${colorPrimary};
+  background-color: ${Colors.colorPrimary};
   border-radius: 10px;
 `;
